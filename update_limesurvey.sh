@@ -25,7 +25,7 @@ fi
 
 mysqldump --user=$DB_USER --password=$DB_PASSWORD $DB_NAME > $BACKUP_PATH/limesurvey.sql
 
-mv $INSTALLATION_PATH $BACKUP_PATH
+sudo mv $INSTALLATION_PATH $BACKUP_PATH
 tar xvf $FILE --directory $WEBAPPS_PATH
 mv $WEBAPPS_PATH/limesurvey $INSTALLATION_PATH
 cp $BACKUP_PATH/$INSTALLATION_NAME/application/config/config.php $INSTALLATION_PATH/application/config/
